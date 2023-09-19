@@ -5,7 +5,6 @@
  * @data: int we want to push
  * Return: always 0
  */
-int top = -1;
 void _push(stack_t **stack, unsigned int data)
 {
 	add_dnodeint(stack, data);
@@ -55,7 +54,7 @@ void _pop(stack_t **stack, unsigned int line)
 	if (stack == NULL || *stack == NULL)
 	{
 		fprintf(stderr, "L %d: can't pop, stack empty\n", line);
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 	current = *stack;
 	*stack = (*stack)->next;
