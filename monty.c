@@ -11,13 +11,13 @@ int check_push(char *secondToken, unsigned int line)
 
 	if (secondToken == NULL)
 	{
-		fprintf(stderr, "L %d: usage: push integer \n", line);
+		fprintf(stderr, "L%d: usage: push integer \n", line);
 		return (-1);
 	}
 	strtol(secondToken, &inv, 10);
 	if (*inv != '\0' && !isspace(*inv))
 	{
-		fprintf(stderr, "L %d: invalid integer: %s\n", line, secondToken);
+		fprintf(stderr, "L%d: invalid integer: %s\n", line, secondToken);
 		return (-1);
 	}
 	return (0);
@@ -61,7 +61,7 @@ int main_helper(instruction_t ins[])
 			else
 			if (ins[i + 1].opcode == NULL)
 			{
-				fprintf(stderr, "L %d: unknown instruction %s\n", line, firstToken);
+				fprintf(stderr, "L%d: unknown instruction %s\n", line, firstToken);
 				exit(EXIT_FAILURE);
 			}
 		}
