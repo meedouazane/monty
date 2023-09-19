@@ -8,7 +8,6 @@
 void _push(stack_t **stack, unsigned int data)
 {
 	add_dnodeint(stack, data);
-	top = top + 1;
 }
 /**
  * _pall - show element of the stack.
@@ -33,10 +32,10 @@ void _pint(stack_t **stack, unsigned int line)
 	stack_t *h;
 
 	h = *stack;
-	if (top == -1)
+	if (*stack == NULL)
 	{
-		printf("L %d: can't pint, stack empty\n", line);
-		EXIT_FAILURE;
+		fprintf(stderr,"L %d: can't pint, stack empty\n", line);
+		exit (EXIT_FAILURE);
 	}
 	else
 		printf("%d\n", h->n);
