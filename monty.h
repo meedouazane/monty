@@ -41,6 +41,7 @@ stack_t *add_dnodeint(stack_t **head, const int n);
 void _push(stack_t **stack, unsigned int data);
 void _pall(stack_t **stack, unsigned int data);
 void _pint(stack_t **stack, unsigned int line);
+void _pop(stack_t **stack, unsigned int line);
 int check_push(char *secondToken, unsigned int line);
 int main_helper( instruction_t ins[]);
 #endif
