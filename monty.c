@@ -11,7 +11,7 @@ int check_push(char *secondToken, unsigned int line)
 
 	if (secondToken == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer \n", line);
+		fprintf(stderr, "L%d: usage: push integer\n", line);
 		return (-1);
 	}
 	strtol(secondToken, &inv, 10);
