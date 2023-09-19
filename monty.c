@@ -46,7 +46,7 @@ int main_helper(instruction_t ins[])
 				if (strcmp(firstToken, "push") == 0)
 				{
 					if (check_push(secondToken, line) == -1)
-						EXIT_FAILURE;
+						exit(EXIT_FAILURE);
 					else
 						ins[i].f(&head, atoi(secondToken));
 				line++;
@@ -62,7 +62,7 @@ int main_helper(instruction_t ins[])
 			if (ins[i + 1].opcode == NULL)
 			{
 				fprintf(stderr, "L %d: unknown instruction %s\n", line, firstToken);
-				EXIT_FAILURE;
+				exit(EXIT_FAILURE);
 			}
 		}
 	}
@@ -88,13 +88,13 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file");
-		EXIT_FAILURE;
+		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s", argv[1]);
-		EXIT_FAILURE;
+		exit(EXIT_FAILURE);
 	}
 	main_helper(ins);
 	return (EXIT_SUCCESS);
