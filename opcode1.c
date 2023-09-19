@@ -42,7 +42,7 @@ void _pint(stack_t **stack, unsigned int line)
 }
 /**
  * _pop -  removes the top element of the stack.
- * * @stack: head of linked list
+ * @stack: head of linked list
  * @line: number of line
  * Return: always 0
  */
@@ -59,3 +59,15 @@ void _pop(stack_t **stack, unsigned int line)
 	*stack = (*stack)->next;
 	free(current);
 }
+/**
+ * _nop -  removes the top element of the stack.
+ * @stack: head of linked list
+ * @line: number of line
+ * Return: always 0
+ */
+void _nop(stack_t **stack, unsigned int line)
+{
+	(void)stack;
+	(void)line;
+}
+
