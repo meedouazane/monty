@@ -85,6 +85,7 @@ int main(int argc, char *argv[])
 		{"pop", _pop},
 		{"nop", _nop},
 		{"add", _add},
+		{"sub", _sub},
 		{NULL, NULL}
 	};
 

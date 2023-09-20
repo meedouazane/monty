@@ -31,3 +31,24 @@ void _add(stack_t **stack, unsigned int line)
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
+/**
+ * _sub - sub the top two elements of the stack.
+ * @stack: head of linked list
+ * @line: number of line
+ * Return: always 0
+ */
+void _sub(stack_t **stack, unsigned int line)
+{
+        int sub = 0;
+
+        if (stack == NULL || (*stack)->next == NULL || *stack == NULL)
+        {
+                fprintf(stderr, "L%d: can't sub, stack too short\n", line);
+                exit(EXIT_FAILURE);
+        }
+        (*stack) = (*stack)->next;
+        sub = (*stack)->n - (*stack)->prev->n;
+        (*stack)->n = sub;
+        free((*stack)->prev);
+        (*stack)->prev = NULL;
+}
