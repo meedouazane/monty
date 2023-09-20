@@ -12,14 +12,22 @@ void _push(stack_t **stack, unsigned int data)
 /**
  * _pall - show element of the stack.
  * @stack: head of linked list
- * @data: int we want to push
+ * @line: int we want to push
  * Return: always 0
  */
-void _pall(stack_t **stack, unsigned int data)
+void _pall(stack_t **stack, unsigned int line)
 {
-	(void)data;
+	stack_t *current;
 
-	print_dlistint(*stack);
+	(void)line;
+	if (stack == NULL)
+		exit(EXIT_FAILURE);
+	current = *stack;
+	while (current != NULL)
+	{
+		printf("%d\n", current->n);
+		current = current->next;
+	}
 }
 /**
  * _pint -  prints the value at the top of the stack.
