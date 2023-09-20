@@ -29,7 +29,7 @@ stack_t *add_dnodeint(stack_t **head, const int n)
  * @head: the head of linked list
  * Return: Always EXIT_SUCCESS.
  */
-void free_stack(void)
+void free_stack(stack_t *head)
 {
 	stack_t *current;
 	stack_t *temp;
