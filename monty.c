@@ -17,7 +17,7 @@ int check_push(char *secondToken, unsigned int line)
 	strtol(secondToken, &inv, 10);
 	if (*inv != '\0' && !isspace(*inv))
 	{
-		fprintf(stderr, "L%d: invalid integer: %s\n", line, secondToken);
+		fprintf(stderr, "L%d: usage: push integer\n", line);
 		return (-1);
 	}
 	return (0);
