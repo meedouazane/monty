@@ -13,7 +13,6 @@ void _push(stack_t **stack, unsigned int data)
  * _pall - show element of the stack.
  * @stack: head of linked list
  * @line: int we want to push
- * Return: always 0
  */
 void _pall(stack_t **stack, unsigned int line)
 {
