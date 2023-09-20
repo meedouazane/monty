@@ -67,7 +67,7 @@ int main_helper(instruction_t ins[])
 		}
 	}
 	fclose(file);
-	free_stack(head);
+	free_stack();
 	return (0);
 }
 /**

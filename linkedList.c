@@ -1,4 +1,5 @@
 #include "monty.h"
+stack_t *head = NULL;
 /**
  * add_dnodeint - adds a new node at the beginning of a dlistint_t list.
  * @head: head of linked list
@@ -28,7 +29,7 @@ stack_t *add_dnodeint(stack_t **head, const int n)
  * @head: the head of linked list
  * Return: Always EXIT_SUCCESS.
  */
-void free_stack(stack_t *head)
+void free_stack(void)
 {
 	stack_t *current;
 	stack_t *temp;
