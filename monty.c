@@ -100,6 +100,5 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	main_helper(ins);
-	fclose(file);
 	return (0);
 }
