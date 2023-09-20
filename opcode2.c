@@ -62,3 +62,32 @@ void _sub(stack_t **stack, unsigned int line)
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
+/**
+ * _swap - swaps the top two elements of the stack.
+ * @stack: head of linked list
+ * @line: number of line
+ * Return: always 0
+ */
+void _swap(stack_t **stack, unsigned int line)
+{
+	stack_t *current;
+
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line);
+		exit(EXIT_FAILURE);
+	}
+	if (stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line);
+		exit(EXIT_FAILURE);
+	}
+	current = (*stack)->next;
+	(*stack)->next = current->next;
+	if (current->next != NULL)
+		current->next->prev = *stack;
+	current->next = *stack;
+	(*stack)->prev = current;
+	current->prev = NULL;
+	*stack = current;
+}
