@@ -1,5 +1,4 @@
 #include "monty.h"
-stack_t *head = NULL;
 /**
  * add_dnodeint - adds a new node at the beginning of a dlistint_t list.
  * @head: head of linked list
