@@ -67,7 +67,7 @@ int main_helper(instruction_t ins[])
 		}
 	}
 	fclose(file);
-	free_stack(head);
+	free_stack();
 	return (0);
 }
 /**
@@ -84,6 +84,7 @@ int main(int argc, char *argv[])
 		{"pint", _pint},
 		{"pop", _pop},
 		{"nop", _nop},
+		{"add", _add},
 		{NULL, NULL}
 	};
 
