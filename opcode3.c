@@ -56,3 +56,34 @@ void _div(stack_t **stack, unsigned int line)
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
+/**
+ * _mod - computes the rest of the division of the second top element.
+ * @stack: head of linked list
+ * @line: number of line
+ * Return: always 0
+ */
+void _mod(stack_t **stack, unsigned int line)
+{
+	int mod = 0;
+
+	if (*stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't mod, stack too short\n", line);
+		exit(EXIT_FAILURE);
+	}
+	if (stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't mod, stack too short\n", line);
+		exit(EXIT_FAILURE);
+	}
+	if ((*stack)->n == 0)
+	{
+		fprintf(stderr, "L%d: division by zero\n", line);
+		exit(EXIT_FAILURE);
+	}
+	(*stack) = (*stack)->next;
+	mod = (*stack)->n % (*stack)->prev->n;
+	(*stack)->n = mod;
+	free((*stack)->prev);
+	(*stack)->prev = NULL;
+}

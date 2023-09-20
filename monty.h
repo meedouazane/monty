@@ -39,6 +39,7 @@ void _sub(stack_t **stack, unsigned int line);
 void _swap(stack_t **stack, unsigned int line);
 void _mul(stack_t **stack, unsigned int line);
 void _div(stack_t **stack, unsigned int line);
+void _mod(stack_t **stack, unsigned int line);
 void free_stack(stack_t *head);
 stack_t *add_dnodeint(stack_t **head, const int n);
 void _add(stack_t **stack, unsigned int line);

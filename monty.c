@@ -89,6 +89,7 @@ int main(int argc, char *argv[])
 		{"swap", _swap},
 		{"mul", _mul},
 		{"div", _div},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 
