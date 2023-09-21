@@ -90,6 +90,7 @@ int main(int argc, char *argv[])
 		{"mul", _mul},
 		{"div", _div},
 		{"mod", _mod},
+		{"rotl", _rotl},
 		{NULL, NULL}
 	};
 
