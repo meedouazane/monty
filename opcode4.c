@@ -7,14 +7,12 @@
  */
 void _rotl(stack_t **stack, unsigned int line)
 {
-	stack_t *tmp1, *tmp2;
+	stack_t *tmp1 = NULL;
+	stack_t *tmp2 = NULL;
 
 	(void)line;
-	if (*stack == NULL)
-		exit(0);
-	if ((*stack)->next == NULL)
-		exit(0);
-
+	if ((*stack)->next == NULL || *stack == NULL)
+		return;
 	tmp1 = (*stack)->next;
 	tmp2 = *stack;
 
