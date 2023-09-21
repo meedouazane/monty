@@ -11,9 +11,9 @@ void _rotl(stack_t **stack, unsigned int line)
 
 	(void)line;
 	if (*stack == NULL)
-		return;
+		exit(0);
 	if ((*stack)->next == NULL)
-		return;
+		exit(0);
 
 	tmp1 = (*stack)->next;
 	tmp2 = *stack;
